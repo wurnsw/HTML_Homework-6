@@ -315,6 +315,13 @@ a {
   font-weight: 700;
 }
 
+.button--mailing {
+  padding: 0 28px;
+
+  gap: 10px;
+
+  letter-spacing: 0.06em;
+}
 /* #endregion */
 
 /* #region FEATURES */
@@ -463,15 +470,6 @@ a {
 
 .social__title {
   margin: 0 0 20px;
-
-  line-height: 16px;
-
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: var(--color-white);
 }
 
 .social__list {
@@ -567,6 +565,17 @@ a {
 
 .footer__logo {
   margin: 0 0 20px;
+}
+
+.footer--title {
+  line-height: 16px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-white);
 }
 
 /* #endregion */
@@ -698,12 +707,13 @@ a {
   right: 0;
 
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
   pointer-events: none;
 }
 
 .modal:target {
   opacity: 1;
+
   pointer-events: all;
 }
 
@@ -746,21 +756,75 @@ a {
   right: 8px;
 
   display: flex;
-  height: 30px;
-  width: 30px;
   justify-content: center;
   align-items: center;
+
+  height: 30px;
+  width: 30px;
 
   background-color: var(--color-white);
 
   border: 1px solid #0000001a;
   border-radius: 50%;
-
-  cursor: pointer;
 }
 
 .modal__close {
   width: 11px;
   height: 11px;
+}
+/* #endregion */
+
+/* #region MAILING */
+.mailing {
+  position: relative;
+
+  width: 570px;
+  height: 86px;
+}
+
+.mailing__input {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  padding: 0 0 0 70px;
+
+  height: 50px;
+  width: 358px;
+
+  outline: none;
+
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  color: var(--color-white);
+}
+
+.mailing__icon-email {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+
+  width: 47px;
+  height: 20px;
+
+  color: var(--color-white);
+}
+
+.mailing__input:hover {
+  border-color: var(--color-blue);
+}
+
+.mailing__icon-telegram {
+  width: 24px;
+  height: 24px;
+}
+
+.mailing__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 /* #endregion */
