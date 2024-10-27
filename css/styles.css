@@ -332,6 +332,10 @@ a {
 
   letter-spacing: 0.06em;
 }
+
+.button--send:hover {
+  box-shadow: 0px 2px 1px 0px #00000033;
+}
 /* #endregion */
 
 /* #region FEATURES */
@@ -577,7 +581,7 @@ a {
   margin: 0 0 20px;
 }
 
-.footer--title {
+.footer-title {
   line-height: 16px;
 
   font-size: 14px;
@@ -717,7 +721,9 @@ a {
   right: 0;
 
   opacity: 0;
+
   transition: opacity 300ms;
+
   pointer-events: none;
 }
 
@@ -820,7 +826,7 @@ a {
   margin-bottom: 20px;
 }
 
-.modal__rules {
+.modal__conditions {
   margin-bottom: 30px;
 }
 
@@ -866,6 +872,8 @@ a {
 }
 
 .field__contacts--high {
+  padding: 0;
+
   height: 120px;
 
   resize: none;
@@ -894,8 +902,8 @@ a {
 
 /* #endregion */
 
-/* #region RULES */
-.rules {
+/* #region CONDITIONS */
+.conditions {
   display: flex;
   justify-content: baseline;
   gap: 8px;
@@ -907,27 +915,10 @@ a {
   color: var(--color-grey);
 }
 
-.rules--blue {
+.conditions__link {
   text-decoration: underline;
 
   color: var(--color-blue);
-}
-
-.rules__custom-checkbox {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rules__icon {
-  display: flex;
-
-  width: 16px;
-  height: 15px;
-
-  color: var(--color-black);
 }
 /* #endregion */
 
@@ -960,8 +951,6 @@ a {
 
   transition: border-color 250ms;
 
-  transition: border-color 250ms;
-
   cursor: pointer;
 }
 
@@ -978,6 +967,8 @@ a {
   height: 20px;
 
   color: var(--color-white);
+
+  transition: color 250ms;
 }
 
 .mailing__label:hover .mailing__icon-email {
@@ -987,8 +978,6 @@ a {
 .mailing__icon-telegram {
   width: 24px;
   height: 24px;
-
-  transition: color 250ms;
 }
 
 .mailing__button {
