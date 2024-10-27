@@ -7,7 +7,11 @@ h3,
 h4,
 p,
 ul,
-ol {
+ol,
+label,
+input,
+textarea,
+fieldset {
   margin: 0;
   padding: 0;
 }
@@ -319,6 +323,12 @@ a {
   padding: 0 28px;
 
   gap: 10px;
+
+  letter-spacing: 0.06em;
+}
+
+.button--send {
+  padding: 0 52px;
 
   letter-spacing: 0.06em;
 }
@@ -736,10 +746,11 @@ a {
   top: 50%;
   left: 50%;
 
+  padding: 40px;
+
   transform: translate(-50%, -35%);
 
   width: 528px;
-  height: 521px;
 
   background-color: var(--color-white);
 
@@ -766,11 +777,157 @@ a {
 
   border: 1px solid #0000001a;
   border-radius: 50%;
+
+  transition: color 250ms, border-color 250ms;
 }
 
 .modal__close {
   width: 11px;
   height: 11px;
+
+  color: var(--color-black);
+}
+
+.modal__button:hover {
+  border-color: var(--color-blue);
+}
+
+.modal__button:hover .modal__close {
+  color: var(--color-blue);
+}
+
+.modal__title {
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+
+  color: var(--color-black);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__fieldset {
+  margin-bottom: 20px;
+}
+
+.modal__rules {
+  margin-bottom: 30px;
+}
+
+/* #endregion */
+
+/* #region FIELD */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border: 0 none;
+}
+
+.field__label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: var(--color-grey);
+}
+
+.field__contacts {
+  padding-left: 42px;
+
+  width: 448px;
+  height: 40px;
+
+  outline: none;
+
+  border: 1px solid #21212133;
+  border-radius: 4px;
+
+  transition: border-color 250ms;
+
+  cursor: pointer;
+}
+
+.field__contacts--high {
+  height: 120px;
+
+  resize: none;
+}
+
+.field__icon {
+  position: absolute;
+  bottom: 14px;
+  left: 15px;
+
+  width: 12px;
+  height: 12px;
+
+  color: var(--color-black);
+
+  transition: color 250ms;
+}
+
+.field__contacts:hover {
+  border-color: var(--color-blue);
+}
+
+.field__label:hover .field__icon {
+  color: var(--color-blue);
+}
+
+/* #endregion */
+
+/* #region RULES */
+.rules {
+  display: flex;
+  justify-content: baseline;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--color-grey);
+}
+
+.rules--blue {
+  text-decoration: underline;
+
+  color: var(--color-blue);
+}
+
+.rules__custom-checkbox {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules__icon {
+  display: flex;
+
+  width: 16px;
+  height: 15px;
+
+  color: var(--color-black);
 }
 /* #endregion */
 
@@ -800,6 +957,16 @@ a {
   background-color: transparent;
 
   color: var(--color-white);
+
+  transition: border-color 250ms;
+
+  transition: border-color 250ms;
+
+  cursor: pointer;
+}
+
+.mailing__input:hover {
+  border-color: var(--color-blue);
 }
 
 .mailing__icon-email {
@@ -813,13 +980,15 @@ a {
   color: var(--color-white);
 }
 
-.mailing__input:hover {
-  border-color: var(--color-blue);
+.mailing__label:hover .mailing__icon-email {
+  color: var(--color-blue);
 }
 
 .mailing__icon-telegram {
   width: 24px;
   height: 24px;
+
+  transition: color 250ms;
 }
 
 .mailing__button {
