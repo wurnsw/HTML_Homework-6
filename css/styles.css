@@ -571,6 +571,8 @@ a {
 /* #region FOOTER */
 
 .footer {
+  position: relative;
+
   padding: 60px 0;
 
   background-color: var(--background-color);
@@ -966,7 +968,9 @@ a {
 
 /* #region SUBSCRIBE */
 .subscribe {
-  position: relative;
+  position: absolute;
+  top: 72px;
+  right: 215px;
 
   width: 570px;
   height: 86px;
