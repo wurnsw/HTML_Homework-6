@@ -571,8 +571,6 @@ a {
 /* #region FOOTER */
 
 .footer {
-  position: relative;
-
   padding: 60px 0;
 
   background-color: var(--background-color);
@@ -580,8 +578,8 @@ a {
 
 .footer__content {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
-  gap: 70px;
 }
 
 .footer__logo {
@@ -968,9 +966,7 @@ a {
 
 /* #region SUBSCRIBE */
 .subscribe {
-  position: absolute;
-  top: 72px;
-  right: 215px;
+  position: relative;
 
   width: 570px;
   height: 86px;
