@@ -504,7 +504,7 @@ a {
 
   border-radius: 50%;
 
-  transition: 250ms background-color;
+  transition: 250ms background-color, 250ms color;
 }
 
 .social__item:hover,
@@ -727,7 +727,7 @@ a {
 
   opacity: 0;
 
-  transition: opacity 300ms;
+  transition: opacity 700ms;
 
   pointer-events: none;
 }
@@ -797,6 +797,8 @@ a {
   height: 11px;
 
   color: var(--color-black);
+
+  transition: 250ms color;
 }
 
 .modal__button:hover {
